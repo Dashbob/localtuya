@@ -165,7 +165,7 @@ class LocaltuyaFan(LocalTuyaEntity, FanEntity):
                 )
             self.schedule_update_ha_state()
 
-    async def async_oscillate(self, oscillating: bool) -> None:
+    async def async_oscillate(self, oscillating) -> None:
         """Set oscillation."""
         _LOGGER.debug("Fan async_oscillate: %s", oscillating)
         await self._device.set_dp(
